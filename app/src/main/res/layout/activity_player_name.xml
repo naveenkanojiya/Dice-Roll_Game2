@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lteRed"
+    tools:context=".PlayerNameActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btHome"
+        style="@style/player_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/outline_bg"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Home"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/p2Name"
+        style="@style/player_text"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/outline_bg"
+        android:ems="10"
+        android:hint="Player 2"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/p1Name"
+        app:layout_constraintTop_toBottomOf="@+id/p1Name" />
+
+    <EditText
+        android:id="@+id/p1Name"
+        style="@style/player_text"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/outline_bg"
+        android:ems="10"
+        android:hint="Player 1"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <EditText
+        android:id="@+id/p3Name"
+        style="@style/player_text"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/outline_bg"
+        android:ems="10"
+        android:hint="Player 3"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/p1Name"
+        app:layout_constraintTop_toBottomOf="@+id/p2Name" />
+
+    <EditText
+        android:id="@+id/p4Name"
+        style="@style/player_text"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/outline_bg"
+        android:ems="10"
+        android:hint="Player 4"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/p1Name"
+        app:layout_constraintTop_toBottomOf="@+id/p3Name" />
+
+    <EditText
+        android:id="@+id/p6Name"
+        style="@style/player_text"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/outline_bg"
+        android:ems="10"
+        android:hint="Player 6"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/p1Name"
+        app:layout_constraintTop_toBottomOf="@+id/p5Name" />
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/player_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Set Players Name"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <EditText
+        android:id="@+id/p5Name"
+        style="@style/player_text"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/outline_bg"
+        android:ems="10"
+        android:hint="Player 5"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/p1Name"
+        app:layout_constraintTop_toBottomOf="@+id/p4Name" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        style="@style/player_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/btn_bg"
+        android:text="Start Game"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/btHome"
+        app:layout_constraintTop_toBottomOf="@+id/btHome"
+        app:srcCompat="@drawable/dice" />
+
+    <TextView
+        android:id="@+id/btSkip"
+        style="@style/player_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Skip"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toBottomOf="@+id/btHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btHome" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/player_text"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lteRed"
+    tools:context=".DiceGameActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/germania_one"
+        android:text="Dice King Game"
+        android:textColor="@color/gray"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/twoLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/targetTextAlign">
+
+        <ImageView
+            android:id="@+id/p2Indicator"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/p2Text"
+            app:layout_constraintTop_toTopOf="@+id/p2Text"
+            app:srcCompat="@drawable/dice" />
+
+        <TextView
+            android:id="@+id/p2Score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/germania_one"
+            android:text="00"
+            android:textColor="@color/gray"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/p2Text"
+            app:layout_constraintStart_toStartOf="@+id/p2Text"
+            app:layout_constraintTop_toBottomOf="@+id/p2Text" />
+
+        <TextView
+            android:id="@+id/p2Text"
+            style="@style/player_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Player 2"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/p1Text"
+            style="@style/player_text"
+            android:layout_marginStart="16dp"
+            android:text="Player 1"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/p1Score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/germania_one"
+            android:text="00"
+            android:textColor="@color/gray"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/p1Text"
+            app:layout_constraintStart_toStartOf="@+id/p1Text"
+            app:layout_constraintTop_toBottomOf="@+id/p1Text" />
+
+        <ImageView
+            android:id="@+id/p1Indicator"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/p1Text"
+            app:layout_constraintTop_toTopOf="@+id/p1Text"
+            app:srcCompat="@drawable/dice" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/diceImg"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/dice" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fourLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twoLay">
+
+        <ImageView
+            android:id="@+id/p3Indicator"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/p3Text"
+            app:layout_constraintTop_toTopOf="@+id/p3Text"
+            app:srcCompat="@drawable/dice" />
+
+        <TextView
+            android:id="@+id/p3Text"
+            style="@style/player_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Player 3"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/p3Score"
+            style="@style/player_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="00"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toEndOf="@+id/p3Text"
+            app:layout_constraintStart_toStartOf="@+id/p3Text"
+            app:layout_constraintTop_toBottomOf="@+id/p3Text" />
+
+        <TextView
+            android:id="@+id/p4Text"
+            style="@style/player_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Player 4"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/p4Score"
+            style="@style/player_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="00"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toEndOf="@+id/p4Text"
+            app:layout_constraintStart_toStartOf="@+id/p4Text"
+            app:layout_constraintTop_toBottomOf="@+id/p4Text" />
+
+        <ImageView
+            android:id="@+id/p4Indicator"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/p4Score"
+            app:layout_constraintEnd_toStartOf="@+id/p4Text"
+            app:layout_constraintTop_toTopOf="@+id/p4Text"
+            app:srcCompat="@drawable/dice" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/targetTextAlign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/germania_one"
+        android:paddingStart="16dp"
+        android:paddingTop="13dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="13dp"
+        android:text="Target :      "
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diceImg" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sixlay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fourLay">
+
+        <ImageView
+            android:id="@+id/p5Indicator"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/p5Score"
+            app:layout_constraintStart_toEndOf="@+id/p5Text"
+            app:layout_constraintTop_toTopOf="@+id/p5Text"
+            app:srcCompat="@drawable/dice" />
+
+        <TextView
+            android:id="@+id/p5Text"
+            style="@style/player_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Player 5"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/p5Score"
+            style="@style/player_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="00"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toEndOf="@+id/p5Text"
+            app:layout_constraintStart_toStartOf="@+id/p5Text"
+            app:layout_constraintTop_toBottomOf="@+id/p5Text" />
+
+        <TextView
+            android:id="@+id/p6Text"
+            style="@style/player_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Player 6"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/p6Score"
+            style="@style/player_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="00"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toEndOf="@+id/p6Text"
+            app:layout_constraintStart_toStartOf="@+id/p6Text"
+            app:layout_constraintTop_toBottomOf="@+id/p6Text" />
+
+        <ImageView
+            android:id="@+id/p6Indicator"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/p6Score"
+            app:layout_constraintEnd_toStartOf="@+id/p6Text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/dice" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btStartRoll"
+        style="@style/player_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/btn_bg"
+        android:text="Start Roll"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sixlay" />
+
+    <TextView
+        android:id="@+id/targetPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/germania_one"
+        android:paddingStart="8dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="0dp"
+        android:text=" + "
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/targetTextAlign"
+        app:layout_constraintStart_toEndOf="@+id/targetTextAlign"
+        app:layout_constraintTop_toTopOf="@+id/targetTextAlign" />
+
+    <TextView
+        android:id="@+id/targetMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/germania_one"
+        android:paddingStart="8dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="0dp"
+        android:text=" - "
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/targetTextAlign"
+        app:layout_constraintEnd_toStartOf="@+id/targetTextAlign"
+        app:layout_constraintTop_toTopOf="@+id/targetTextAlign" />
+
+    <TextView
+        android:id="@+id/targetText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:fontFamily="@font/germania_one"
+        android:text="00"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/targetTextAlign"
+        app:layout_constraintEnd_toStartOf="@+id/targetPlus"
+        app:layout_constraintHorizontal_bias="0.74"
+        app:layout_constraintStart_toStartOf="@+id/targetTextAlign"
+        app:layout_constraintTop_toTopOf="@+id/targetTextAlign" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnReset"
+        style="@style/player_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_bg"
+        android:text="Reset"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/btStartRoll"
+        app:layout_constraintStart_toStartOf="@+id/btStartRoll"
+        app:layout_constraintTop_toBottomOf="@+id/btStartRoll" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DiceKing" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/lteRed</item>
+
+    </style>
+
+
+    <style name="Theme.DiceKing" parent="Base.Theme.DiceKing" />
+</resources>
